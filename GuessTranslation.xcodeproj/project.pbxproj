@@ -22,6 +22,7 @@
 		1131AC912AFC205200AE5F97 /* JSONResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC902AFC205200AE5F97 /* JSONResource.swift */; };
 		1131AC932AFC207A00AE5F97 /* JSONFileStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC922AFC207A00AE5F97 /* JSONFileStub.swift */; };
 		1131AC952AFC22B100AE5F97 /* JSONStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC942AFC22B100AE5F97 /* JSONStubs.swift */; };
+		1131AC972AFC2EB400AE5F97 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC962AFC2EB400AE5F97 /* GameState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		1131AC902AFC205200AE5F97 /* JSONResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONResource.swift; sourceTree = "<group>"; };
 		1131AC922AFC207A00AE5F97 /* JSONFileStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileStub.swift; sourceTree = "<group>"; };
 		1131AC942AFC22B100AE5F97 /* JSONStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONStubs.swift; sourceTree = "<group>"; };
+		1131AC962AFC2EB400AE5F97 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				1131AC892AFC1D7900AE5F97 /* Word.swift */,
+				1131AC962AFC2EB400AE5F97 /* GameState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				1131AC8D2AFC1F9700AE5F97 /* JSONFile.swift in Sources */,
 				1131AC812AFC1CA900AE5F97 /* GameView.swift in Sources */,
 				1131AC932AFC207A00AE5F97 /* JSONFileStub.swift in Sources */,
+				1131AC972AFC2EB400AE5F97 /* GameState.swift in Sources */,
 				1131AC532AFC1BD100AE5F97 /* GuessTranslationApp.swift in Sources */,
 				1131AC912AFC205200AE5F97 /* JSONResource.swift in Sources */,
 			);

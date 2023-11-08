@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Word: Decodable {
+struct Word: Decodable, Equatable {
     let english: String
     let spanish: String
 

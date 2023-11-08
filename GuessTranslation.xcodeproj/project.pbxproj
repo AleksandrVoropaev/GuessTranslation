@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		1131AC532AFC1BD100AE5F97 /* GuessTranslationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC522AFC1BD100AE5F97 /* GuessTranslationApp.swift */; };
-		1131AC552AFC1BD100AE5F97 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC542AFC1BD100AE5F97 /* ContentView.swift */; };
 		1131AC572AFC1BD300AE5F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1131AC562AFC1BD300AE5F97 /* Assets.xcassets */; };
 		1131AC5A2AFC1BD300AE5F97 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1131AC592AFC1BD300AE5F97 /* Preview Assets.xcassets */; };
 		1131AC642AFC1BD300AE5F97 /* GuessTranslationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC632AFC1BD300AE5F97 /* GuessTranslationTests.swift */; };
 		1131AC6E2AFC1BD300AE5F97 /* GuessTranslationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC6D2AFC1BD300AE5F97 /* GuessTranslationUITests.swift */; };
 		1131AC702AFC1BD300AE5F97 /* GuessTranslationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC6F2AFC1BD300AE5F97 /* GuessTranslationUITestsLaunchTests.swift */; };
+		1131AC812AFC1CA900AE5F97 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC802AFC1CA900AE5F97 /* GameView.swift */; };
+		1131AC862AFC1D0300AE5F97 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC852AFC1D0300AE5F97 /* GameViewModel.swift */; };
+		1131AC882AFC1D5400AE5F97 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = 1131AC872AFC1D5400AE5F97 /* words.json */; };
+		1131AC8A2AFC1D7900AE5F97 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC892AFC1D7900AE5F97 /* Word.swift */; };
+		1131AC8D2AFC1F9700AE5F97 /* JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC8C2AFC1F9700AE5F97 /* JSONFile.swift */; };
+		1131AC8F2AFC1FCA00AE5F97 /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC8E2AFC1FCA00AE5F97 /* Mockable.swift */; };
+		1131AC912AFC205200AE5F97 /* JSONResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC902AFC205200AE5F97 /* JSONResource.swift */; };
+		1131AC932AFC207A00AE5F97 /* JSONFileStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC922AFC207A00AE5F97 /* JSONFileStub.swift */; };
+		1131AC952AFC22B100AE5F97 /* JSONStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC942AFC22B100AE5F97 /* JSONStubs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +44,6 @@
 /* Begin PBXFileReference section */
 		1131AC4F2AFC1BD100AE5F97 /* GuessTranslation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTranslation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1131AC522AFC1BD100AE5F97 /* GuessTranslationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTranslationApp.swift; sourceTree = "<group>"; };
-		1131AC542AFC1BD100AE5F97 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1131AC562AFC1BD300AE5F97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1131AC592AFC1BD300AE5F97 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1131AC5F2AFC1BD300AE5F97 /* GuessTranslationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessTranslationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +51,15 @@
 		1131AC692AFC1BD300AE5F97 /* GuessTranslationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessTranslationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1131AC6D2AFC1BD300AE5F97 /* GuessTranslationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTranslationUITests.swift; sourceTree = "<group>"; };
 		1131AC6F2AFC1BD300AE5F97 /* GuessTranslationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTranslationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1131AC802AFC1CA900AE5F97 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		1131AC852AFC1D0300AE5F97 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		1131AC872AFC1D5400AE5F97 /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
+		1131AC892AFC1D7900AE5F97 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		1131AC8C2AFC1F9700AE5F97 /* JSONFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFile.swift; sourceTree = "<group>"; };
+		1131AC8E2AFC1FCA00AE5F97 /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
+		1131AC902AFC205200AE5F97 /* JSONResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONResource.swift; sourceTree = "<group>"; };
+		1131AC922AFC207A00AE5F97 /* JSONFileStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileStub.swift; sourceTree = "<group>"; };
+		1131AC942AFC22B100AE5F97 /* JSONStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONStubs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +110,9 @@
 		1131AC512AFC1BD100AE5F97 /* GuessTranslation */ = {
 			isa = PBXGroup;
 			children = (
-				1131AC522AFC1BD100AE5F97 /* GuessTranslationApp.swift */,
-				1131AC542AFC1BD100AE5F97 /* ContentView.swift */,
-				1131AC562AFC1BD300AE5F97 /* Assets.xcassets */,
-				1131AC582AFC1BD300AE5F97 /* Preview Content */,
+				1131AC7E2AFC1C5C00AE5F97 /* Resources */,
+				1131AC7D2AFC1C0300AE5F97 /* Sources */,
+				1131AC7C2AFC1BF600AE5F97 /* Screens */,
 			);
 			path = GuessTranslation;
 			sourceTree = "<group>";
@@ -125,6 +140,79 @@
 				1131AC6F2AFC1BD300AE5F97 /* GuessTranslationUITestsLaunchTests.swift */,
 			);
 			path = GuessTranslationUITests;
+			sourceTree = "<group>";
+		};
+		1131AC7C2AFC1BF600AE5F97 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				1131AC7F2AFC1C8700AE5F97 /* Game */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		1131AC7D2AFC1C0300AE5F97 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1131AC842AFC1CE300AE5F97 /* Extensions */,
+				1131AC832AFC1CD200AE5F97 /* Models */,
+				1131AC822AFC1CCB00AE5F97 /* JSON */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1131AC7E2AFC1C5C00AE5F97 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1131AC522AFC1BD100AE5F97 /* GuessTranslationApp.swift */,
+				1131AC562AFC1BD300AE5F97 /* Assets.xcassets */,
+				1131AC582AFC1BD300AE5F97 /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1131AC7F2AFC1C8700AE5F97 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				1131AC802AFC1CA900AE5F97 /* GameView.swift */,
+				1131AC852AFC1D0300AE5F97 /* GameViewModel.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		1131AC822AFC1CCB00AE5F97 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				1131AC8B2AFC1F5E00AE5F97 /* Mockable */,
+				1131AC872AFC1D5400AE5F97 /* words.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		1131AC832AFC1CD200AE5F97 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1131AC892AFC1D7900AE5F97 /* Word.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1131AC842AFC1CE300AE5F97 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1131AC8B2AFC1F5E00AE5F97 /* Mockable */ = {
+			isa = PBXGroup;
+			children = (
+				1131AC8C2AFC1F9700AE5F97 /* JSONFile.swift */,
+				1131AC902AFC205200AE5F97 /* JSONResource.swift */,
+				1131AC922AFC207A00AE5F97 /* JSONFileStub.swift */,
+				1131AC942AFC22B100AE5F97 /* JSONStubs.swift */,
+				1131AC8E2AFC1FCA00AE5F97 /* Mockable.swift */,
+			);
+			path = Mockable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1131AC882AFC1D5400AE5F97 /* words.json in Resources */,
 				1131AC5A2AFC1BD300AE5F97 /* Preview Assets.xcassets in Resources */,
 				1131AC572AFC1BD300AE5F97 /* Assets.xcassets in Resources */,
 			);
@@ -257,8 +346,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1131AC552AFC1BD100AE5F97 /* ContentView.swift in Sources */,
+				1131AC862AFC1D0300AE5F97 /* GameViewModel.swift in Sources */,
+				1131AC8F2AFC1FCA00AE5F97 /* Mockable.swift in Sources */,
+				1131AC952AFC22B100AE5F97 /* JSONStubs.swift in Sources */,
+				1131AC8A2AFC1D7900AE5F97 /* Word.swift in Sources */,
+				1131AC8D2AFC1F9700AE5F97 /* JSONFile.swift in Sources */,
+				1131AC812AFC1CA900AE5F97 /* GameView.swift in Sources */,
+				1131AC932AFC207A00AE5F97 /* JSONFileStub.swift in Sources */,
 				1131AC532AFC1BD100AE5F97 /* GuessTranslationApp.swift in Sources */,
+				1131AC912AFC205200AE5F97 /* JSONResource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +443,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -404,7 +501,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -421,15 +519,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"GuessTranslation/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"GuessTranslation/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = P69WPVTUW2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,9 +535,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = oleksandr.voropayev.GuessTranslation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -450,15 +551,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"GuessTranslation/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"GuessTranslation/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = P69WPVTUW2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,9 +567,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = oleksandr.voropayev.GuessTranslation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

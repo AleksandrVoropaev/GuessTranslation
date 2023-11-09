@@ -21,6 +21,11 @@ struct Word: Decodable, Equatable {
         self.english = try container.decode(String.self, forKey: .english)
         self.spanish = try container.decode(String.self, forKey: .spanish)
     }
+
+    init(english: String, spanish: String) {
+        self.english = english
+        self.spanish = spanish
+    }
 }
 
 extension Word: ArrayMockable {

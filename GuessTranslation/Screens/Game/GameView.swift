@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct GameView: View {
-    @ObservedObject var viewModel = ViewModel()
+    // MARK: - PROPERTIES
+
+    @ObservedObject private var viewModel = ViewModel()
     @State private var isAnimating: Bool = false
+    @State private var isDialogPresented: Bool = false
+
+    // MARK: - BODY
 
     var body: some View {
         VStack {
@@ -26,7 +31,7 @@ struct GameView: View {
                 Spacer()
             }
 
-            Text(viewModel.word ?? "")
+            Text(viewModel.guessWord ?? "")
                 .main()
                 .multilineTextAlignment(.center)
 
@@ -52,16 +57,24 @@ struct GameView: View {
                 isAnimating = false
             }
         }
-        .onReceive(viewModel.$word) { _ in
+        .onReceive(viewModel.$guessWord) { _ in
             withAnimation(.linear(duration: Constants.duration)) {
                 isAnimating = true
             }
         }
+        .onReceive(viewModel.$isGameFinished) { isGameFinished in
+            isDialogPresented = isGameFinished
+        }
+        .alert(isPresented: $isDialogPresented) {
+            alert
+        }
     }
+
+    // MARK: - SUBVIEWS
 
     private func button(isCorrect: Bool) -> some View {
         Button {
-            viewModel.recieved(answer: isCorrect)
+            viewModel.didRecieve(answer: isCorrect)
         } label: {
             Text(isCorrect ? "Correct" : "Wrong")
                 .secondary()
@@ -69,7 +82,22 @@ struct GameView: View {
         .foregroundColor(isCorrect ? .green : .red)
         .frame(width: 100)
     }
+
+    private var alert: Alert {
+        Alert(
+            title: Text("Game Over"),
+            message: Text("Your score is:\n" + viewModel.gameState.scoreString),
+            dismissButton: .destructive(
+                Text("Start new game"),
+                action: {
+                    viewModel.start()
+                }
+            )
+        )
+    }
 }
+
+// MARK: - PREVIEW
 
 #Preview {
     GameView()

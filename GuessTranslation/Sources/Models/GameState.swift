@@ -7,13 +7,14 @@
 
 import Foundation
 
-struct GameState {
+struct GameState: Equatable {
     var correct: Int
     var wrong: Int
 }
 
 extension GameState {
     var all: Int { correct + wrong }
+    var scoreString: String { "Correct - \(correct) / Wrong - \(wrong)"}
 }
 
 extension GameState {

@@ -11,21 +11,20 @@ extension GameView {
     final class ViewModel: ObservableObject {
         // MARK: - PROPERTIES
 
-        private var words: [Word] = []
+        private let gameModel: GameModel
         private var currentWord: Word?
+        private var timer: Timer?
 
-        @Published private(set) var word: String?
+        @Published private(set) var guessWord: String?
         @Published private(set) var translation: String?
         @Published private(set) var isGameFinished = false
         @Published private(set) var gameState: GameState = .initial
 
-        private var timer: Timer?
-        
         // MARK: - INIT
 
-        init() {
-            loadWords()
-            start()
+        init(gameModel: GameModel = GuessGameModel(correctWordProbability: Constants.probability)) {
+            self.gameModel = gameModel
+            self.start()
         }
 
         // MARK: - PUBLIC FUNCTIONS
@@ -35,8 +34,10 @@ extension GameView {
             nextStep()
         }
 
-        func recieved(answer: Bool) {
-            let isCorrect = isCorrect(answer)
+        func didRecieve(answer: Bool) {
+            guard let currentWord else { return }
+
+            let isCorrect = gameModel.checkAnswer(word: currentWord, answer: answer)
             proceed { [weak self] in
                 self?.updateState(isCorrectAnswer: isCorrect)
             }
@@ -50,18 +51,10 @@ extension GameView {
 
         // MARK: - PRIVATE FUNCTIONS
 
-        private func loadWords() {
-            words = Word.mock
-        }
-
         private func proceed(with block: @escaping ()->()) {
             stopTimer()
             block()
             nextStep()
-        }
-
-        private func isCorrect(_ answer: Bool) -> Bool {
-            (currentWord?.english == translation) == answer
         }
 
         private func updateState(isCorrectAnswer: Bool) {
@@ -83,31 +76,20 @@ extension GameView {
                 return
             }
             
-            setNewWord()
+            setNextWord()
             startTimer()
         }
 
         private func checkIfFinished() -> Bool {
-            gameState.all >= 15 || gameState.wrong >= 3
+            gameState.all >= Constants.maxTotalAnswers || gameState.wrong >= Constants.maxWrongAnswers
         }
 
-        private func setNewWord() {
-            guard let newWord = words.randomElement() else {
-                return
-            }
+        private func setNextWord() {
+            let nextWord = gameModel.next()
 
-            currentWord = newWord
-            word = newWord.spanish
-            if shouldSetCorrectTranslation() {
-                translation = newWord.english
-            } else {
-                let incorrectWord = words.filter { $0 != newWord }.randomElement() ?? newWord
-                translation = incorrectWord.english
-            }
-        }
-
-        private func shouldSetCorrectTranslation() -> Bool {
-            Double(arc4random()) / Double(UInt32.max) <= Constants.chance
+            currentWord = nextWord
+            guessWord = nextWord.spanish
+            translation = nextWord.english
         }
 
         private func resetGame() {
@@ -128,7 +110,9 @@ extension GameView {
     }
 
     enum Constants {
-        static let chance: Double = 0.25
+        static let probability: Double = 0.25
         static let duration: Double = 3
+        static let maxTotalAnswers = 15
+        static let maxWrongAnswers = 3
     }
 }

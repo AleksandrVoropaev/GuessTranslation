@@ -58,7 +58,7 @@ struct GameView: View {
             }
         }
         .onReceive(viewModel.$guessWord) { _ in
-            withAnimation(.linear(duration: Constants.duration)) {
+            withAnimation(.linear(duration: Constants.attemptDuration)) {
                 isAnimating = true
             }
         }

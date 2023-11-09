@@ -98,7 +98,7 @@ extension GameView {
         }
 
         private func startTimer() {
-            timer = Timer.scheduledTimer(withTimeInterval: Constants.duration, repeats: false) { [weak self] _ in
+            timer = Timer.scheduledTimer(withTimeInterval: Constants.attemptDuration, repeats: false) { [weak self] _ in
                 self?.skip()
             }
         }
@@ -111,7 +111,7 @@ extension GameView {
 
     enum Constants {
         static let probability: Double = 0.25
-        static let duration: Double = 3
+        static let attemptDuration: Double = 5
         static let maxTotalAnswers = 15
         static let maxWrongAnswers = 3
     }

@@ -73,7 +73,7 @@ final class GameViewModelTests: XCTestCase {
 
         _ = XCTWaiter.wait(
             for: [expectation(description: "Wait for timer")],
-            timeout: Constants.duration
+            timeout: Constants.attemptDuration
         )
 
         XCTAssertEqual(viewModel.gameState.correct, 0)
@@ -85,7 +85,7 @@ final class GameViewModelTests: XCTestCase {
 
         _ = XCTWaiter.wait(
             for: [expectation(description: "Wait for timer")],
-            timeout: Constants.duration - 0.1
+            timeout: Constants.attemptDuration - 0.1
         )
 
         viewModel.didRecieve(answer: true)
@@ -139,7 +139,7 @@ final class GameViewModelTests: XCTestCase {
 
         _ = XCTWaiter.wait(
             for: [expectation(description: "Wait for timer")],
-            timeout: Constants.duration * Double(Constants.maxWrongAnswers)
+            timeout: Constants.attemptDuration * Double(Constants.maxWrongAnswers)
         )
 
         XCTAssertTrue(viewModel.isGameFinished)

@@ -23,6 +23,7 @@
 		1131AC932AFC207A00AE5F97 /* JSONFileStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC922AFC207A00AE5F97 /* JSONFileStub.swift */; };
 		1131AC952AFC22B100AE5F97 /* JSONStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC942AFC22B100AE5F97 /* JSONStubs.swift */; };
 		1131AC972AFC2EB400AE5F97 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC962AFC2EB400AE5F97 /* GameState.swift */; };
+		1131AC992AFC3BDA00AE5F97 /* Text+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131AC982AFC3BDA00AE5F97 /* Text+Style.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		1131AC922AFC207A00AE5F97 /* JSONFileStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileStub.swift; sourceTree = "<group>"; };
 		1131AC942AFC22B100AE5F97 /* JSONStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONStubs.swift; sourceTree = "<group>"; };
 		1131AC962AFC2EB400AE5F97 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		1131AC982AFC3BDA00AE5F97 /* Text+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Style.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 		1131AC842AFC1CE300AE5F97 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1131AC982AFC3BDA00AE5F97 /* Text+Style.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			files = (
 				1131AC862AFC1D0300AE5F97 /* GameViewModel.swift in Sources */,
 				1131AC8F2AFC1FCA00AE5F97 /* Mockable.swift in Sources */,
+				1131AC992AFC3BDA00AE5F97 /* Text+Style.swift in Sources */,
 				1131AC952AFC22B100AE5F97 /* JSONStubs.swift in Sources */,
 				1131AC8A2AFC1D7900AE5F97 /* Word.swift in Sources */,
 				1131AC8D2AFC1F9700AE5F97 /* JSONFile.swift in Sources */,

@@ -19,26 +19,33 @@ extension GameView {
         @Published private(set) var isGameFinished = false
         @Published private(set) var gameState: GameState = .initial
 
+        private var timer: Timer?
+        
         // MARK: - INIT
 
         init() {
             loadWords()
+            start()
         }
 
         // MARK: - PUBLIC FUNCTIONS
 
         func start() {
             resetGame()
+            nextStep()
         }
 
         func recieved(answer: Bool) {
-            updateState(with: answer)
-            nextStep()
+            let isCorrect = isCorrect(answer)
+            proceed { [weak self] in
+                self?.updateState(isCorrectAnswer: isCorrect)
+            }
         }
 
         func skip() {
-            wrongAnswer()
-            nextStep()
+            proceed { [weak self] in
+                self?.updateState(isCorrectAnswer: false)
+            }
         }
 
         // MARK: - PRIVATE FUNCTIONS
@@ -47,12 +54,18 @@ extension GameView {
             words = Word.mock
         }
 
-        private func updateState(with answer: Bool) {
-            isCorrect(answer) ? correctAnswer() : wrongAnswer()
+        private func proceed(with block: @escaping ()->()) {
+            stopTimer()
+            block()
+            nextStep()
         }
 
         private func isCorrect(_ answer: Bool) -> Bool {
             (currentWord?.english == translation) == answer
+        }
+
+        private func updateState(isCorrectAnswer: Bool) {
+            isCorrectAnswer ? correctAnswer() : wrongAnswer()
         }
 
         private func correctAnswer() {
@@ -71,6 +84,7 @@ extension GameView {
             }
             
             setNewWord()
+            startTimer()
         }
 
         private func checkIfFinished() -> Bool {
@@ -93,16 +107,28 @@ extension GameView {
         }
 
         private func shouldSetCorrectTranslation() -> Bool {
-            Double(arc4random_uniform(UInt32.max) / UInt32.max) <= Constants.chance
+            Double(arc4random()) / Double(UInt32.max) <= Constants.chance
         }
 
         private func resetGame() {
             isGameFinished = false
             gameState = .initial
         }
+
+        private func startTimer() {
+            timer = Timer.scheduledTimer(withTimeInterval: Constants.duration, repeats: false) { [weak self] _ in
+                self?.skip()
+            }
+        }
+
+        private func stopTimer() {
+            timer?.invalidate()
+            timer = nil
+        }
     }
 
-    private enum Constants {
+    enum Constants {
         static let chance: Double = 0.25
+        static let duration: Double = 3
     }
 }
